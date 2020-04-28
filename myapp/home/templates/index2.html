@@ -1,0 +1,58 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Boot strap -->
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <style>
+        .container{
+            margin-top: 20px;
+        }
+        .content{
+            min-height: 60%;
+            margin: auto;
+        }
+        .row{
+            margin:0;
+            padding:0;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        .active{
+            color: #fff;
+            background-color: #337ab7;
+        }
+
+    </style>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+    <title> 화이트 뷰 메인 페이지 </title>
+</head>
+<body>
+    <h1>programmers 과제 테스트 템플릿 - Django</h1>
+    <p>Happy Coding!</p>
+    {% block content %}
+    {% for produc in product %}
+    <li>{{produc.id}}, {{produc.name}},{{produc.ingredients}},{{produc.price}}</li>
+    {% endfor %}
+    {% for ingredi in ingredient%}
+    <li>{{ingredi.name}},{{ingredi.oily}},{{ingredi.sensitive}},{{ingredi.dry}}</li>
+     {% endfor %}
+
+    {% endblock %}
+
+</body>
+
+</html>
